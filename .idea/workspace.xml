@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="" />
+    <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdylan/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/cdylan/database/seeders/DatabaseSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +186,7 @@
       <updated>1669063618498</updated>
       <workItem from="1669063619827" duration="3179000" />
       <workItem from="1669066810920" duration="5810000" />
-      <workItem from="1669074094712" duration="12751000" />
+      <workItem from="1669074094712" duration="14105000" />
     </task>
     <servers />
   </component>
