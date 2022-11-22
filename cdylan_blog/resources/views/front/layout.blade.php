@@ -45,7 +45,7 @@
 
     <!-- header
     ================================================== -->
-    <header class="s-header">
+    <header class="s-header @unless(currentRoute('home')) s-header--opaque @endunless">
 
         <div class="s-header__logo">
             <a class="logo" href="{{ route('home') }}">
@@ -115,7 +115,7 @@
 
     <!-- content
     ================================================== -->
-    <section class="s-content s-content--no-top-padding">
+    <section class="s-content @if(currentRoute('home')) s-content--no-top-padding @endif">
 
         @yield('main')
 

@@ -17,3 +17,10 @@ if (!function_exists('currentRoute')) {
         return Route::currentRouteNamed($route) ? ' class=current' : '';
     }
 }
+
+if (!function_exists('formatDate')) {
+    function formatDate($date)
+    {
+        return ucfirst(utf8_encode ($date->formatLocalized('%d %B %Y')));
+    }
+}
