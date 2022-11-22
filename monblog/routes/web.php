@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
+use App\Http\Controllers\Front\PostController as FrontPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +16,11 @@ use UniSharp\LaravelFilemanager\Lfm;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], function () {
     Lfm::routes();
 });
+
+Route::name('home')->get('/', [FrontPostController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

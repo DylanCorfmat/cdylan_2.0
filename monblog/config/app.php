@@ -4,6 +4,17 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Pagination Configuration
+    |--------------------------------------------------------------------------
+    */
+
+    'nbrPages' => [
+        'posts' => 12,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -211,5 +222,6 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
+
 
 ];
