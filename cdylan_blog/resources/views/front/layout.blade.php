@@ -5,9 +5,12 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>{{ config('app.name') }}</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>{{ isset($post) && $post->seo_title ? $post->seo_title :  config('app.name') }}</title>
+    <meta name="description" content="{{ isset($post) && $post->meta_description ? $post->meta_description : __(config('app.description')) }}">
+    <meta name="author" content="{{ isset($post) ? $post->user->name : __(config('app.author')) }}">
+    @if(isset($post) && $post->meta_keywords)
+        <meta name="keywords" content="{{ $post->meta_keywords }}">
+    @endif
 
     <!-- mobile specific metas
     ================================================== -->
@@ -45,7 +48,7 @@
 
     <!-- header
     ================================================== -->
-    <header class="s-header">
+    <header class="s-header @unless(currentRoute('home')) s-header--opaque @endunless">
 
         <div class="s-header__logo">
             <a class="logo" href="{{ route('home') }}">
@@ -67,7 +70,7 @@
                         <a href="#" title="">@lang('Categories')</a>
                         <ul class="sub-menu">
                             @foreach($categories as $category)
-                                <li><a href="#">{{ $category->title }}</a></li>
+                                <li><a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a></li>
                             @endforeach
                         </ul>
                     </li>
@@ -86,10 +89,10 @@
             <div class="s-header__search-inner">
                 <div class="row wide">
 
-                    <form role="search" method="get" class="s-header__search-form" action="#">
+                    <form role="search" method="get" class="s-header__search-form" action="{{ Route('posts.search') }}">
                         <label>
                             <span class="h-screen-reader-text">@lang('Search for:')</span>
-                            <input type="search" class="s-header__search-field" placeholder="Search for..." value="" name="s" title="Search for:" autocomplete="off">
+                            <input id="search" type="search" name="search" class="s-header__search-field" placeholder="@lang('Search for...')" title="@lang('Search for:')" autocomplete="off">
                         </label>
                         <input type="submit" class="s-header__search-submit" value="Search">
                     </form>
@@ -115,7 +118,7 @@
 
     <!-- content
     ================================================== -->
-    <section class="s-content s-content--no-top-padding">
+    <section class="s-content @if(currentRoute('home')) s-content--no-top-padding @endif">
 
         @yield('main')
 

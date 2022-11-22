@@ -210,6 +210,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Gravatar' => \Creativeorange\Gravatar\Gravatar::class,
     ])->toArray(),
 
     /*
@@ -222,4 +223,11 @@ return [
         'posts' => 6,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | SEO
+    |--------------------------------------------------------------------------
+    */
+    'description' => 'The best blog in the world',
+    'author' => 'The best author',
 ];

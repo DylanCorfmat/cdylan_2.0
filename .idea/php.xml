@@ -112,6 +112,9 @@
       <path value="$PROJECT_DIR$/cdylan_blog/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/cdylan_blog/vendor/brick/math" />
       <path value="$PROJECT_DIR$/cdylan_blog/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/cdylan_blog/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/cdylan_blog/vendor/unisharp/laravel-filemanager" />
+      <path value="$PROJECT_DIR$/cdylan_blog/vendor/creativeorange/gravatar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1">

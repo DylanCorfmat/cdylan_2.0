@@ -31,4 +31,13 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], functi
     Lfm::routes();
 });
 
+Route::prefix('posts')->group(function () {
+    Route::name('posts.display')->get('{slug}', [FrontPostController::class, 'show']);
+    Route::name('posts.search')->get('', [FrontPostController::class, 'search']);
+});
+
+Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
+Route::name('author')->get('author/{user}', [FrontPostController::class, 'user']);
+Route::name('tag')->get('tag/{tag:slug}', [FrontPostController::class, 'tag']);
+
 require __DIR__.'/auth.php';
