@@ -36,5 +36,6 @@ Route::prefix('posts')->group(function () {
 });
 
 Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
+Route::name('author')->get('author/{user}', [FrontPostController::class, 'user']);
 
 require __DIR__.'/auth.php';

@@ -77,4 +77,12 @@ class PostRepository
                 $q->where('categories.slug', $category_slug);
             })->paginate($nbrPages);
     }
+
+    public function getActiveOrderByDateForUser($nbrPages, $user_id)
+    {
+        return $this->queryActiveOrderByDate()
+            ->whereHas('user', function ($q) use ($user_id) {
+                $q->where('users.id', $user_id);
+            })->paginate($nbrPages);
+    }
 }
