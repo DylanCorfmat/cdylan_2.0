@@ -3,11 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Comment;
-use App\Models\Post;
-use App\Models\User;
-use Illuminate\Database\Seeder;
+use App\Models\{ User, Contact, Post, Comment, Page };
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,7 +29,6 @@ class DatabaseSeeder extends Seeder
             User::factory()->count(3)->create();
         });
         $nbrUsers = 6;
-
 
         DB::table('categories')->insert([
             [
@@ -83,7 +80,6 @@ class DatabaseSeeder extends Seeder
 
         $nbrPosts = 9;
 
-
         // Tags attachment
         $posts = Post::all();
         foreach ($posts as $post) {
@@ -100,7 +96,7 @@ class DatabaseSeeder extends Seeder
             }
         }
 
-// Set categories
+        // Set categories
         foreach ($posts as $post) {
             if ($post->id === 9) {
                 DB::table ('category_post')->insert ([
