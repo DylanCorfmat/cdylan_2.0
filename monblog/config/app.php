@@ -220,8 +220,16 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
     ])->toArray(),
 
+    /*
+    |--------------------------------------------------------------------------
+    | SEO
+    |--------------------------------------------------------------------------
+    */
+
+    'description' => 'The best blog in the world',
+    'author' => 'The best author',
 
 ];

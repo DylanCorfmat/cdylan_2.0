@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/app/Http/ViewComposers/HomeComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/app/Repositories/PostRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/app/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/front/brick.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/front/hero.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/front/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/front/pagination.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/front/post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Front/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Front/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Front/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Repositories/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Repositories/PostRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/config/lfm.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/lfm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/front/brick.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/components/front/brick.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
     </list>
@@ -196,7 +194,7 @@
       <workItem from="1669066810920" duration="5810000" />
       <workItem from="1669074094712" duration="14105000" />
       <workItem from="1669151868423" duration="159000" />
-      <workItem from="1669152031235" duration="5679000" />
+      <workItem from="1669152031235" duration="6735000" />
     </task>
     <servers />
   </component>
