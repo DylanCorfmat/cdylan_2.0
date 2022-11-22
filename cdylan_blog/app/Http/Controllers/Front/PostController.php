@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front;
 use App\Repositories\PostRepository;
 use App\Http\Controllers\Controller;
-use App\Models\{Category,User};
+use App\Models\{Category,User, Tag};
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -44,6 +44,13 @@ class PostController extends Controller
     {
         $posts = $this->postRepository->getActiveOrderByDateForUser($this->nbrPages, $user->id);
         $title = __('Posts for author ') . '<strong>' . $user->name . '</strong>';
+        return view('front.index', compact('posts', 'title'));
+    }
+
+    public function tag(Tag $tag)
+    {
+        $posts = $this->postRepository->getActiveOrderByDateForTag($this->nbrPages, $tag->slug);
+        $title = __('Posts for tag ') . '<strong>' . $tag->tag . '</strong>';
         return view('front.index', compact('posts', 'title'));
     }
 }

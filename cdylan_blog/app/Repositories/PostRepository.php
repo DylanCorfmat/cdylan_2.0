@@ -85,4 +85,12 @@ class PostRepository
                 $q->where('users.id', $user_id);
             })->paginate($nbrPages);
     }
+
+    public function getActiveOrderByDateForTag($nbrPages, $tag_slug)
+    {
+        return $this->queryActiveOrderByDate()
+            ->whereHas('tags', function ($q) use ($tag_slug) {
+                $q->where('tags.slug', $tag_slug);
+            })->paginate($nbrPages);
+    }
 }
