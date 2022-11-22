@@ -5,9 +5,12 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>{{ config('app.name') }}</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>{{ isset($post) && $post->seo_title ? $post->seo_title :  config('app.name') }}</title>
+    <meta name="description" content="{{ isset($post) && $post->meta_description ? $post->meta_description : __(config('app.description')) }}">
+    <meta name="author" content="{{ isset($post) ? $post->user->name : __(config('app.author')) }}">
+    @if(isset($post) && $post->meta_keywords)
+        <meta name="keywords" content="{{ $post->meta_keywords }}">
+    @endif
 
     <!-- mobile specific metas
     ================================================== -->
