@@ -5,6 +5,7 @@ use App\Repositories\PostRepository;
 use App\Http\Controllers\Controller;
 use App\Models\{Category,User, Tag};
 use Illuminate\Http\Request;
+use App\Http\Requests\Front\SearchRequest;
 
 class PostController extends Controller
 {
@@ -51,6 +52,14 @@ class PostController extends Controller
     {
         $posts = $this->postRepository->getActiveOrderByDateForTag($this->nbrPages, $tag->slug);
         $title = __('Posts for tag ') . '<strong>' . $tag->tag . '</strong>';
+        return view('front.index', compact('posts', 'title'));
+    }
+
+    public function search(SearchRequest $request)
+    {
+        $search = $request->search;
+        $posts = $this->postRepository->search($this->nbrPages, $search);
+        $title = __('Posts found with search: ') . '<strong>' . $search . '</strong>';
         return view('front.index', compact('posts', 'title'));
     }
 }

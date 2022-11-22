@@ -93,4 +93,14 @@ class PostRepository
                 $q->where('tags.slug', $tag_slug);
             })->paginate($nbrPages);
     }
+
+    public function search($n, $search)
+    {
+        return $this->queryActiveOrderByDate()
+            ->where(function ($q) use ($search) {
+                $q->where('excerpt', 'like', "%$search%")
+                    ->orWhere('body', 'like', "%$search%")
+                    ->orWhere('title', 'like', "%$search%");
+            })->paginate($n);
+    }
 }

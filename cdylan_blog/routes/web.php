@@ -33,6 +33,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => 'auth'], functi
 
 Route::prefix('posts')->group(function () {
     Route::name('posts.display')->get('{slug}', [FrontPostController::class, 'show']);
+    Route::name('posts.search')->get('', [FrontPostController::class, 'search']);
 });
 
 Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
