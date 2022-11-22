@@ -35,4 +35,6 @@ Route::prefix('posts')->group(function () {
     Route::name('posts.display')->get('{slug}', [FrontPostController::class, 'show']);
 });
 
+Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
+
 require __DIR__.'/auth.php';

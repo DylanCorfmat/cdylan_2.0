@@ -69,4 +69,12 @@ class PostRepository
             ->oldest('id')
             ->firstWhere('id', '>', $id);
     }
+
+    public function getActiveOrderByDateForCategory($nbrPages, $category_slug)
+    {
+        return $this->queryActiveOrderByDate()
+            ->whereHas('categories', function ($q) use ($category_slug) {
+                $q->where('categories.slug', $category_slug);
+            })->paginate($nbrPages);
+    }
 }

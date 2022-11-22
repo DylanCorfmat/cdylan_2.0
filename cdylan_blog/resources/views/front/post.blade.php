@@ -45,7 +45,7 @@
                                 <div class="cat-links">
                                     <span>@lang('In')</span>
                                     @foreach ($post->categories as $category)
-                                        <a href="#">{{ $category->title }}</a>
+                                        <a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a>
                                     @endforeach
                                 </div>
 

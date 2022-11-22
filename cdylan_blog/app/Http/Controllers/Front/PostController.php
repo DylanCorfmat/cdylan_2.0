@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front;
 use App\Repositories\PostRepository;
 use App\Http\Controllers\Controller;
-
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -29,5 +29,14 @@ class PostController extends Controller
     {
         $post = $this->postRepository->getPostBySlug($slug);
         return view('front.post', compact('post'));
+    }
+
+    public function category(Category $category)
+    {
+        $posts = $this->postRepository->getActiveOrderByDateForCategory($this->nbrPages,
+        $category->slug);
+        $title = __('Posts for category '). '<strong>' . $category->title . '</strong>';
+
+        return view('front.index', compact('posts','title'));
     }
 }

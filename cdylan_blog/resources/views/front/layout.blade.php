@@ -70,7 +70,7 @@
                         <a href="#" title="">@lang('Categories')</a>
                         <ul class="sub-menu">
                             @foreach($categories as $category)
-                                <li><a href="#">{{ $category->title }}</a></li>
+                                <li><a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a></li>
                             @endforeach
                         </ul>
                     </li>
