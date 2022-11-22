@@ -106,11 +106,39 @@
                 @endif
             </div>
         </div>
+        @if(Auth::check())
+            <div class="row comment-respond">
+                <div id="respond" class="column">
+                    <h3>@lang('Add Comment')
+                        <span id="forName"></span>
+                        <span><a id="abort" hidden href="#">@lang('Abort reply')</a></span>
+                    </h3>
+                    <div id="alert" class="alert-box" style="display: none">
+                        <p></p>
+                        <span class="alert-box__close"></span>
+                    </div>
+                    <form id="messageForm" method="post" action="{{ route('posts.comments.store', $post->id) }}" autocomplete="off">
+                        <input id="commentId" name="commentId" type="hidden" value="">
+                        <div class="message form-field">
+                            <textarea name="message" id="message" class="h-full-width" placeholder="@lang('Your Message')"></textarea>
+                        </div>
+                        <br>
+                        <p id="forSubmit" class="text-center">
+                            <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="@lang('Add Comment')" type="submit">
+                        </p>
+                        <p id="commentIcon" class="h-text-center" hidden>
+                            <span class="fa fa-spinner fa-pulse fa-3x fa-fw"></span>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        @endif
     </div>
 
 @endsection
 
 @section('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         (() => {
 
@@ -121,6 +149,79 @@
                 'Accept': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
             }
+            const commentId = document.getElementById('commentId');
+            const alert = document.getElementById('alert');
+            const message = document.getElementById('message');
+            const forName = document.getElementById('forName');
+            const abort = document.getElementById('abort');
+            const commentIcon = document.getElementById('commentIcon');
+            const forSubmit = document.getElementById('forSubmit');
+
+            // Add comment
+            const addComment = async e => {
+                e.preventDefault();
+
+                // Get datas
+                const datas = {
+                    message: message.value
+                };
+
+                if(document.querySelector('#commentId').value != '') {
+                    datas['commentId'] = commentId.value;
+                }
+
+                // Icon
+                commentIcon.hidden = false;
+                forSubmit.hidden = true;
+
+                // Send request
+                const response = await fetch('{{ route('posts.comments.store', $post->id) }}', {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(datas)
+                });
+
+                // Wait for response
+                const data = await response.json();
+
+                // Icon
+                commentIcon.hidden = true;
+                forSubmit.hidden = false;
+
+                // Manage response
+                if (response.ok) {
+                    purge();
+                    if(data == 'ok') {
+                        showComments();
+                        showAlert('success', '@lang('Your comment has been saved')');
+                    } else {
+                        showAlert('info', "@lang('Thanks for your comment. It will appear when an administrator has validated it. Once you are validated your other comments immediately appear.')");
+                    }
+                } else {
+                    if(response.status == 422) {
+                        showAlert('error', data.errors.message[0]);
+                    } else {
+                        errorAlert();
+                    }
+                }
+            }
+
+            const errorAlert = () =>  Swal.fire({
+                icon: 'error',
+                title: '@lang('Whoops!')',
+                text: '@lang('Something went wrong!')'
+            });
+
+            // Show alert
+            const showAlert = (type, text) => {
+                alert.style.display = 'block';
+                alert.className = '';
+                alert.classList.add('alert-box', 'alert-box--' + type);
+                alert.firstChild.textContent = text;
+            }
+
+            // Hide alert
+            const hideAlert = () => alert.style.display = 'none';
 
             // Prepare show comments
             const prepareShowComments = e => {
@@ -144,6 +245,33 @@
                 const data = await response.json();
 
                 document.getElementById('commentsList').innerHTML = data.html;
+                @if(Auth::check())
+                document.getElementById('respond').hidden = false;
+                @endif
+            }
+
+            // Reply to comment
+            const replyToComment = e => {
+                e.preventDefault();
+
+                forName.textContent = `@lang('Reply to') ${e.target.dataset.name}`;
+                commentId.value = e.target.dataset.id;
+                abort.hidden = false;
+                message.focus();
+            }
+
+            // Abort reply
+            const abortReply = (e) => {
+                e.preventDefault();
+                purge();
+            }
+
+            // Purge reply
+            const purge = () => {
+                forName.textContent = '';
+                commentId.value = '';
+                message.value = '';
+                abort.hidden = true;
             }
 
             // Listener wrapper
@@ -158,9 +286,41 @@
                 }
             };
 
+            // Delete comment
+            const deleteComment = async e => {
+                e.preventDefault();
+
+                Swal.fire({
+                    title: '@lang('Really delete this comment?')',
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "@lang('Yes')",
+                    cancelButtonText: "@lang('No')",
+                    preConfirm: () => {
+                        return fetch(e.target.getAttribute('href'), {
+                            method: 'DELETE',
+                            headers: headers
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    showComments();
+                                } else {
+                                    errorAlert();
+                                }
+                            });
+                    }
+                });
+            }
+
             // Set listeners
             window.addEventListener('DOMContentLoaded', () => {
                 wrapper('#showcomments', 'click', prepareShowComments);
+                wrapper('#abort', 'click', abortReply);
+                wrapper('#message', 'focus', hideAlert);
+                wrapper('#messageForm', 'submit', addComment);
+                wrapper('#commentsList', 'click', replyToComment, "e.target.matches('.replycomment')");
+                wrapper('#commentsList', 'click', deleteComment, "e.target.matches('.deletecomment')");
             })
 
         })()
