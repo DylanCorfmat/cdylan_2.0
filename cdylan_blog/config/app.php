@@ -210,6 +210,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Gravatar' => \Creativeorange\Gravatar\Gravatar::class,
     ])->toArray(),
 
     /*
@@ -221,5 +222,4 @@ return [
     'nbrPages' => [
         'posts' => 6,
     ],
-
 ];
