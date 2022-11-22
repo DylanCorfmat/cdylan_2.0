@@ -77,7 +77,7 @@
 
         <div class="row">
             <div class="column large-12">
-                {{-- On va devoir s'occuper de la pagination ici --}}
+                {{ $posts->links('front.pagination') }}
             </div>
         </div>
 
