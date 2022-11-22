@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Post;
 
 class Comment extends Model
 {
@@ -30,5 +31,17 @@ class Comment extends Model
     public function post()
     {
         return $this->belongsTo(Post::class);
+    }
+
+    public function comments(Post $post)
+    {
+        $comments = $post->validComments()
+            ->withDepth()
+            ->latest()
+            ->get()
+            ->toTree();
+        return [
+            'html' => view('front/comments', compact('comments'))->render(),
+        ];
     }
 }

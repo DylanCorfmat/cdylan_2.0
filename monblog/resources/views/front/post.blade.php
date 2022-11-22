@@ -89,4 +89,86 @@
         </div>
     </div>
 
+    <!-- comments
+================================================== -->
+    <div class="comments-wrap">
+
+        <div id="comments" class="row">
+            <div id="commentsList" class="column large-12">
+
+                @if($post->valid_comments_count > 0)
+                    <div id="forShow">
+                        <p id="showbutton" class="text-center">
+                            <a id="showcomments" href="{{ route('posts.comments', $post->id) }}" class="btn h-full-width">@lang('Show comments')</a>
+                        </p>
+                        <p id="showicon" class="h-text-center" hidden>
+                            <span class="fa fa-spinner fa-pulse fa-3x fa-fw"></span>
+                        </p>
+                    </div>
+                @endif
+
+            </div>
+        </div>
+    </div>
+
+
+@endsection
+
+
+@section('scripts')
+    <script>
+        (() => {
+
+            // Variables
+            const headers = {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+
+            // Prepare show comments
+            const prepareShowComments = e => {
+                e.preventDefault();
+
+                document.getElementById('showbutton').toggleAttribute('hidden');
+                document.getElementById('showicon').toggleAttribute('hidden');
+                showComments();
+            }
+
+            // Show comments
+            const showComments = async () => {
+
+                // Send request
+                const response = await fetch('{{ route('posts.comments', $post->id) }}', {
+                    method: 'GET',
+                    headers: headers
+                });
+
+                // Wait for response
+                const data = await response.json();
+
+                document.getElementById('commentsList').innerHTML = data.html;
+            }
+
+            // Listener wrapper
+            const wrapper = (selector, type, callback, condition = 'true', capture = false) => {
+                const element = document.querySelector(selector);
+                if(element) {
+                    document.querySelector(selector).addEventListener(type, e => {
+                        if(eval(condition)) {
+                            callback(e);
+                        }
+                    }, capture);
+                }
+            };
+
+            // Set listeners
+            window.addEventListener('DOMContentLoaded', () => {
+                wrapper('#showcomments', 'click', prepareShowComments);
+            })
+
+        })()
+
+    </script>
 @endsection
