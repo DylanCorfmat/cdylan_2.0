@@ -9,18 +9,18 @@
             <div class="s-hero__slide-meta">
               <span class="cat-links">
                   @foreach($post->categories as $category)
-                      <a href="#">{{ $category->title }}</a>
+                      <a href="{{ route('category', $category->slug) }}">{{ $category->title }}</a>
                   @endforeach
               </span>
                 <span class="byline">
                   @lang('Posted By')
                   <span class="author">
-                      <a href="#">{{ $post->user->name }}</a>
+                      <a href="{{ route('author', $post->user->id) }}">{{ $post->user->name }}</a>
                   </span>
               </span>
             </div>
             <h1 class="s-hero__slide-text">
-                <a href="#">{{ $post->title }}</a>
+                <a href="{{ route('posts.display', $post->slug) }}">{{ $post->title }}</a>
             </h1>
         </div>
     </div>
