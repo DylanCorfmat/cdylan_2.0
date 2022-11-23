@@ -5,7 +5,9 @@ use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 use App\Http\Controllers\Front\{
     PostController as FrontPostController,
-    CommentController as FrontCommentController
+    CommentController as FrontCommentController,
+    ContactController as FrontContactController,
+    PageController as FrontPageController
 };
 
 /*
@@ -45,5 +47,8 @@ Route::name('front.comments.destroy')->delete('comments/{comment}', [FrontCommen
 Route::name('category')->get('category/{category:slug}', [FrontPostController::class, 'category']);
 Route::name('author')->get('author/{user}', [FrontPostController::class, 'user']);
 Route::name('tag')->get('tag/{tag:slug}', [FrontPostController::class, 'tag']);
+Route::resource('contacts', FrontContactController::class, ['only' => ['create', 'store']]);
+Route::name('page')->get('page/{page:slug}', FrontPageController::class);
+
 
 require __DIR__.'/auth.php';

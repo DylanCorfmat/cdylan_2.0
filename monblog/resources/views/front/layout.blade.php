@@ -74,6 +74,9 @@
                             @endforeach
                         </ul>
                     </li>
+                    <li {{ currentRoute('contacts.create') }}>
+                        <a href="{{ route('contacts.create') }}" title="">@lang('Contact')</a>
+                    </li>
                     @guest
                         @request('register')
                         <li class="current">
