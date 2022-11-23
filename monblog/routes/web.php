@@ -44,6 +44,7 @@ Route::middleware('auth', 'password.confirm')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::view('profile', 'auth.profile');
     Route::name('profile')->put('profile', [RegisteredUserController::class, 'update']);
+    Route::name('deleteAccount')->delete('profile/delete',  [RegisteredUserController::class, 'destroy']);
 });
 
 Route::prefix('posts')->group(function () {

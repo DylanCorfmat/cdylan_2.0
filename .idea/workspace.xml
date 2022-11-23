@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/auth/confirm-password.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/rgpd-script.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/rgpd.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/contact.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,11 +182,11 @@
       <recent name="$PROJECT_DIR$/monblog/lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/monblog/resources/views/components/auth" />
       <recent name="$PROJECT_DIR$/monblog/app/Http/Requests/Back" />
       <recent name="$PROJECT_DIR$/monblog/resources/views/back/shared" />
       <recent name="$PROJECT_DIR$/monblog/resources/views/components/back/shared" />
       <recent name="$PROJECT_DIR$/monblog/app/Http/Controllers/Back" />
-      <recent name="$PROJECT_DIR$/monblog/resources/views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
