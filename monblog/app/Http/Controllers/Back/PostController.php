@@ -13,6 +13,10 @@ use App\DataTables\PostsDataTable;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Post::class, 'post');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -77,7 +81,8 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        $categories = Category::all()->pluck('title', 'id');
+        return view('back.posts.form', compact('post', 'categories'));
     }
 
     /**
@@ -87,9 +92,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, PostRepository $repository, Post $post)
     {
-        //
+        $repository->update($post, $request);
+        return back()->with('ok', __('The post has been successfully updated'));
     }
 
     /**
@@ -100,6 +106,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+
+        return response()->json();
     }
 }

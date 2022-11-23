@@ -52,6 +52,7 @@ class PostsDataTable extends DataTable
 //                    return $buttons;
 //                }
 
+                if($post->user_id === auth()->id() || auth()->role = 'admin') {
                 $buttons .= $this->button(
                     'posts.edit',
                     $post->id,
@@ -60,7 +61,6 @@ class PostsDataTable extends DataTable
                     'edit'
                 );
 
-//                if($post->user_id === auth()->id()) {
                     $buttons .= $this->button(
                         'posts.create',
                         $post->id,
@@ -68,9 +68,8 @@ class PostsDataTable extends DataTable
                         __('Clone'),
                         'clone'
                     );
-//                }
 
-                return $buttons . $this->button(
+                    $buttons .= $this->button(
                         'posts.destroy',
                         $post->id,
                         'danger',
@@ -78,6 +77,9 @@ class PostsDataTable extends DataTable
                         'trash-alt',
                         __('Really delete this post?')
                     );
+                }
+
+                return $buttons;
             })
             ->rawColumns(['categories', 'comments_count', 'action', 'created_at']);
     }

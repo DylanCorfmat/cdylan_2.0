@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/public/js/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/posts/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/shared/editorScript.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/back/alert.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/back/card.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/back/input.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/back/validation-errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/app/DataTables/PostsDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/DataTables/PostsDataTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Models/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/Tag.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/app/Repositories/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Repositories/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/back/posts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/back/posts/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/back/shared/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/back/shared/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
