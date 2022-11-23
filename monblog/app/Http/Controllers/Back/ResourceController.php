@@ -16,7 +16,7 @@ class ResourceController extends Controller
     {
         if(!app()->runningInConsole()) {
 
-            $segment = getUrlSegment(request()->url(), 3); // categories ou newcategories
+            $segment = getUrlSegment(request()->url(), 2); // categories ou newcategories
 
             if(substr($segment, 0, 3) === 'new') {
                 $segment = substr($segment, 3);
