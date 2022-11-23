@@ -10,7 +10,7 @@
             <!-- Validation Errors -->
             <x-auth.validation-errors :errors="$errors" />
 
-            <h3 class="h-add-bottom">@lang('Login')</h3>
+            <h3 class="h-add-bottom">@lang('Connexion')</h3>
             <form class="h-add-bottom" method="POST" action="{{ route('login') }}">
                 @csrf
 
@@ -27,7 +27,7 @@
                         type="checkbox"
                         name="remember_me"
                         {{ old('remember_me') ? 'checked' : '' }}>
-                    <span class="label-text">@lang('Remember me')</span>
+                    <span class="label-text">@lang('Se souvenir de moi')</span>
                 </label>
 
                 <x-auth.submit title="Login" />
@@ -37,7 +37,7 @@
 {{--                        @lang('Forgot Your Password?')--}}
 {{--                    </a>--}}
                     <a href="{{ route('register') }}" style="float: right;">
-                        @lang('Not registered?')
+                        @lang('S\'enregistrer')
                     </a>
                 </label>
 

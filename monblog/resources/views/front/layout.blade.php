@@ -60,7 +60,7 @@
 
             <nav class="s-header__nav-wrap">
 
-                <h3 class="s-header__nav-heading h6">@lang('Navigate to')</h3>
+                <h3 class="s-header__nav-heading h6">@lang('Aller à')</h3>
 
                 <ul class="s-header__nav">
                     <li {{ currentRoute('home') }}>
@@ -80,20 +80,20 @@
                     @guest
                         @request('register')
                         <li class="current">
-                            <a href="{{ request()->url() }}">@lang('Register')</a>
+                            <a href="{{ request()->url() }}">@lang('Enregistrement')</a>
                         </li>
                         @endrequest
                         <li {{ currentRoute('login') }}>
-                            <a href="{{ route('login') }}">@lang('Login')</a>
+                            <a href="{{ route('login') }}">@lang('Connexion')</a>
                         </li>
                         @request('forgot-password')
                         <li class="current">
-                            <a href="{{ request()->url() }}">@lang('Password')</a>
+                            <a href="{{ request()->url() }}">@lang('Mot de passe')</a>
                         </li>
                         @endrequest
                         @request('reset-password/*')
                         <li class="current">
-                            <a href="{{ request()->url() }}">@lang('Password')</a>
+                            <a href="{{ request()->url() }}">@lang('Mot de passe')</a>
                         </li>
                         @endrequest
                     @else
@@ -112,16 +112,16 @@
                                         <a
                                             href="{{ route('logout') }}"
                                             onclick="event.preventDefault(); this.previousElementSibling.submit();">
-                                            @lang('Logout')
+                                            @lang('Deconnexion')
                                         </a>
                                     </li>
-                                    <li><a href="{{ url('profile') }}">@lang('Profile')</a></li>
+                                    <li><a href="{{ url('profile') }}">@lang('Profil')</a></li>
                                 </ul>
                             </li>
                     @endguest
                 </ul>
 
-                <a href="#0" title="@lang('Close Menu')" class="s-header__overlay-close close-mobile-menu">@lang('Close')</a>
+                <a href="#0" title="@lang('Fermer')" class="s-header__overlay-close close-mobile-menu">@lang('Fermer')</a>
 
             </nav>
 
@@ -136,13 +136,13 @@
 
                     <form role="search" method="get" class="s-header__search-form" action="{{ Route('posts.search') }}">
                         <label>
-                            <span class="h-screen-reader-text">@lang('Search for:')</span>
-                            <input id="search" type="search" name="search" class="s-header__search-field" placeholder="@lang('Search for...')" title="@lang('Search for:')" autocomplete="off">
+                            <span class="h-screen-reader-text">@lang('Rechercher:')</span>
+                            <input id="search" type="search" name="search" class="s-header__search-field" placeholder="@lang('Rechercher...')" title="@lang('Rechercher:')" autocomplete="off">
                         </label>
                         <input type="submit" class="s-header__search-submit" value="Search">
                     </form>
 
-                    <a href="#0" title="@lang('Close Search')" class="s-header__overlay-close">@lang('Close')</a>
+                    <a href="#0" title="@lang('Fermer la recherche')" class="s-header__overlay-close">@lang('Fermer')</a>
 
                 </div>
             </div>

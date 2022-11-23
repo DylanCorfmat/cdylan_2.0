@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/ResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/ResourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/back/comments/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/back/comments/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/back/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/back/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,22 +160,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowDuplicates.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Applications/MAMP/htdocs/cdylan_2.0/monblog/lang",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowDuplicates.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Applications/MAMP/htdocs/cdylan_2.0/monblog/lang&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/monblog/lang" />
@@ -197,6 +201,7 @@
       <workItem from="1669074094712" duration="14105000" />
       <workItem from="1669151868423" duration="159000" />
       <workItem from="1669152031235" duration="8260000" />
+      <workItem from="1669231493442" duration="43000" />
     </task>
     <servers />
   </component>

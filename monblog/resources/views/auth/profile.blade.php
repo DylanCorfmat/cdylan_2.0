@@ -17,13 +17,13 @@
 
                 <!-- Name -->
                 <div>
-                    <label for="name">@lang('Name')</label>
+                    <label for="name">@lang('Nom')</label>
                     <input
                         id="name"
                         class="h-full-width"
                         type="text"
                         name="name"
-                        placeholder="@lang('Your name')"
+                        placeholder="@lang('Ton nom')"
                         value="{{ old('name', auth()->user()->name) }}"
                         required
                         autofocus>
@@ -37,36 +37,36 @@
                         class="h-full-width"
                         type="email"
                         name="email"
-                        placeholder="@lang('Your email')"
+                        placeholder="@lang('Ton email')"
                         value="{{ old('email', auth()->user()->email) }}"
                         required>
                 </div>
 
                 <!-- Password -->
                 <div>
-                    <label for="password">@lang('Password') (@lang('optional'))</label>
+                    <label for="password">@lang('Mot de passe') (@lang('optionel'))</label>
                     <input
                         id="password"
                         class="h-full-width"
                         type="password"
                         name="password"
-                        placeholder="@lang('Your Password if you want to change it')">
+                        placeholder="@lang('Ton mot de passe, si tu veux le changer')">
                 </div>
 
                 <!-- Confirm Password -->
                 <div>
-                    <label for="password_confirmation">@lang('Confirm Password')</label>
+                    <label for="password_confirmation">@lang('Confirmer le mot de passe')</label>
                     <input
                         id="password_confirmation"
                         class="h-full-width"
                         type="password"
                         name="password_confirmation"
-                        placeholder="@lang('Confirm your Password')">
+                        placeholder="@lang('Confirme ton mot de passe')">
                 </div>
 
                 <x-auth.submit title="Save" />
 
-                <a id="delete" href="{{ route('deleteAccount') }}" class="btn btn--primary h-full-width" style="background: crimson;">@lang('Delete account')</a>
+                <a id="delete" href="{{ route('deleteAccount') }}" class="btn btn--primary h-full-width" style="background: crimson;">@lang('Supprimer le compte')</a>
 
             </form>
         </div>
