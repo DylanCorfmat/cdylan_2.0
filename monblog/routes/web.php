@@ -9,6 +9,7 @@ use App\Http\Controllers\Front\{
     ContactController as FrontContactController,
     PageController as FrontPageController
 };
+use App\Http\Controllers\Back\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +51,13 @@ Route::name('tag')->get('tag/{tag:slug}', [FrontPostController::class, 'tag']);
 Route::resource('contacts', FrontContactController::class, ['only' => ['create', 'store']]);
 Route::name('page')->get('page/{page:slug}', FrontPageController::class);
 
+Route::view('admin', 'back.layout');
+
+Route::prefix('admin')->group(function () {
+    Route::middleware('redac')->group(function () {
+        Route::name('admin')->get('/', [AdminController::class, 'index']);
+        Route::name('purge')->put('purge/{model}', [AdminController::class, 'purge']);
+    });
+});
 
 require __DIR__.'/auth.php';
