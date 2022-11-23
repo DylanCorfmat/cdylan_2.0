@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\ModelCreated;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -21,6 +22,10 @@ class Comment extends Model
         'body',
         'post_id',
         'user_id',
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => ModelCreated::class,
     ];
 
     public function user()

@@ -193,16 +193,12 @@
 
                 <div class="column large-2 medium-3 tab-6 s-footer__social-links">
 
-                    <h5>Follow Us</h5>
-
+                    <h5>@lang('Follow Us')</h5>
                     <ul>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Facebook</a></li>
-                        <li><a href="#0">Dribbble</a></li>
-                        <li><a href="#0">Pinterest</a></li>
-                        <li><a href="#0">Instagram</a></li>
+                        @foreach($follows as $follow)
+                            <li><a href="{{ $follow->href }}">{{ $follow->title }}</a></li>
+                        @endforeach
                     </ul>
-
                 </div>
 
             </div>

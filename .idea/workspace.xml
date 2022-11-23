@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/monblog/resources/errors/403.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/errors/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/errors/503.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/errors/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/errors/partial.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/app/Http/ViewComposers/HomeComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/ViewComposers/HomeComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Models/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
