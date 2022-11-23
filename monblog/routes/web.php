@@ -60,7 +60,8 @@ Route::prefix('admin')->group(function () {
     Route::middleware('redac')->group(function () {
         Route::name('admin')->get('/', [AdminController::class, 'index']);
         Route::name('purge')->put('purge/{model}', [AdminController::class, 'purge']);
-        Route::resource('posts', BackPostController::class)->except('show');
+        Route::resource('posts', BackPostController::class)->except(['show', 'create']);
+        Route::name('posts.create')->get('posts/create/{id?}', [BackPostController::class, 'create']);
     });
 
     Route::middleware('admin')->group(function () {

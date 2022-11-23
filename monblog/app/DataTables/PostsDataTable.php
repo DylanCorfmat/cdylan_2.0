@@ -48,9 +48,9 @@ class PostsDataTable extends DataTable
                     '_blank'
                 );
 
-                if(Route::currentRouteName() === 'posts.indexnew') {
-                    return $buttons;
-                }
+//                if(Route::currentRouteName() === 'posts.indexnew') {
+//                    return $buttons;
+//                }
 
                 $buttons .= $this->button(
                     'posts.edit',
@@ -60,7 +60,7 @@ class PostsDataTable extends DataTable
                     'edit'
                 );
 
-                if($post->user_id === auth()->id()) {
+//                if($post->user_id === auth()->id()) {
                     $buttons .= $this->button(
                         'posts.create',
                         $post->id,
@@ -68,7 +68,7 @@ class PostsDataTable extends DataTable
                         __('Clone'),
                         'clone'
                     );
-                }
+//                }
 
                 return $buttons . $this->button(
                         'posts.destroy',
