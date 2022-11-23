@@ -9,7 +9,10 @@ use App\Http\Controllers\Front\{
     ContactController as FrontContactController,
     PageController as FrontPageController
 };
-use App\Http\Controllers\Back\AdminController;
+use App\Http\Controllers\Back\{
+    AdminController,
+    PostController as BackPostController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +60,11 @@ Route::prefix('admin')->group(function () {
     Route::middleware('redac')->group(function () {
         Route::name('admin')->get('/', [AdminController::class, 'index']);
         Route::name('purge')->put('purge/{model}', [AdminController::class, 'purge']);
+        Route::resource('posts', BackPostController::class)->except('show');
+    });
+
+    Route::middleware('admin')->group(function () {
+        Route::name('posts.indexnew')->get('newposts', [BackPostController::class, 'index']);
     });
 });
 
