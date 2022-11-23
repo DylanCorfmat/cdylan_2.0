@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/categories/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/users/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/config/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/config/titles.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/titles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
