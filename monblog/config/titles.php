@@ -8,4 +8,9 @@ return [
         'edit'     => 'Post Edit',
         'indexnew' => 'New Posts',
     ],
+    'categories' => [
+        'index'  => 'Categories',
+        'create' => 'Category Creation',
+        'edit'   => 'Category Edit',
+    ],
 ];
