@@ -64,6 +64,10 @@ Route::prefix('admin')->group(function () {
         Route::name('purge')->put('purge/{model}', [AdminController::class, 'purge']);
         Route::resource('posts', BackPostController::class)->except(['show', 'create']);
         Route::name('posts.create')->get('posts/create/{id?}', [BackPostController::class, 'create']);
+        Route::name('users.valid')->put('valid/{user}', [BackUserController::class, 'valid']);
+        Route::name('users.unvalid')->put('unvalid/{user}', [BackUserController::class, 'unvalid']);
+        Route::resource('comments', BackResourceController::class)->except(['show', 'create', 'store']);
+        Route::name('comments.indexnew')->get('newcomments', [BackResourceController::class, 'index']);
     });
 
     Route::middleware('admin')->group(function () {
@@ -71,6 +75,10 @@ Route::prefix('admin')->group(function () {
         Route::resource('categories', BackResourceController::class)->except(['show']);
         Route::resource('users', BackUserController::class)->except(['show', 'create', 'store']);
         Route::name('users.indexnew')->get('newusers', [BackResourceController::class, 'index']);
+        Route::resource('contacts', BackResourceController::class)->only(['index', 'destroy']);
+        Route::name('contacts.indexnew')->get('newcontacts', [BackResourceController::class, 'index']);
+        Route::resource('follows', BackResourceController::class)->except(['show']);
+        Route::resource('pages', BackResourceController::class)->except(['show']);
     });
 });
 

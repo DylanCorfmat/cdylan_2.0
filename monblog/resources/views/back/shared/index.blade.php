@@ -105,9 +105,29 @@
                     }, capture);
                 }
             };
+
+            const validElement = async e => {
+                e.preventDefault();
+                fetch(e.target.getAttribute('href'), {
+                    method: 'PUT',
+                    headers: headers
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            document.location.reload();
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: '@lang('Whoops!')',
+                                text: '@lang('Something went wrong!')'
+                            });
+                        }
+                    });
+            }
             // Set listeners
             window.addEventListener('DOMContentLoaded', () => {
                 wrapper('table', 'click', deleteElement, "e.target.matches('.btn-danger')");
+                wrapper('table', 'click', validElement, `e.target.matches('[data-name="valid"]')`);
             });
         })()
     </script>
