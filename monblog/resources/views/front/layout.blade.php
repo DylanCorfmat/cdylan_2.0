@@ -74,6 +74,37 @@
                             @endforeach
                         </ul>
                     </li>
+                    @guest
+                        @request('register')
+                        <li class="current">
+                            <a href="{{ request()->url() }}">@lang('Register')</a>
+                        </li>
+                        @endrequest
+                        <li {{ currentRoute('login') }}>
+                            <a href="{{ route('login') }}">@lang('Login')</a>
+                        </li>
+                        @request('forgot-password')
+                        <li class="current">
+                            <a href="{{ request()->url() }}">@lang('Password')</a>
+                        </li>
+                        @endrequest
+                        @request('reset-password/*')
+                        <li class="current">
+                            <a href="{{ request()->url() }}">@lang('Password')</a>
+                        </li>
+                        @endrequest
+                    @else
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST" hidden>
+                                @csrf
+                            </form>
+                            <a
+                                href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); this.previousElementSibling.submit();">
+                                @lang('Logout')
+                            </a>
+                        </li>
+                    @endguest
                 </ul>
 
                 <a href="#0" title="@lang('Close Menu')" class="s-header__overlay-close close-mobile-menu">@lang('Close')</a>

@@ -1,60 +1,52 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('front.layout')
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+@section('main')
+    <div class="row row-x-center s-styles">
+        <div class="column large-6 tab-12">
 
-            <!-- Name -->
-            <div>
-                <x-input-label for="name" :value="__('Name')" />
-                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
-            </div>
+            <!-- Validation Errors -->
+            <x-auth.validation-errors :errors="$errors" />
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
+            <h3 class="h-add-bottom">@lang('Register')</h3>
+            <form class="h-add-bottom" method="POST" action="{{ route('register') }}">
+                @csrf
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
+                <!-- Name -->
+                <div>
+                    <label for="name">@lang('Name')</label>
+                    <input
+                        id="name"
+                        class="h-full-width"
+                        type="text"
+                        name="name"
+                        placeholder="@lang('Your name')"
+                        value="{{ old('name') }}"
+                        required
+                        autofocus>
+                </div>
 
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
+                <!-- Email Address -->
+                <x-auth.input-email />
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+                <!-- Password -->
+                <x-auth.input-password />
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                <!-- Confirm Password -->
+                <div>
+                    <label for="password_confirmation">@lang('Confirm Password')</label>
+                    <input
+                        id="password_confirmation"
+                        class="h-full-width"
+                        type="password"
+                        name="password_confirmation"
+                        placeholder="@lang('Confirm your Password')"
+                        required>
+                </div>
 
-                <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
+                <x-auth.submit title="Register" />
 
-                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-            </div>
+            </form>
+        </div>
+    </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-primary-button class="ml-4">
-                    {{ __('Register') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+@endsection

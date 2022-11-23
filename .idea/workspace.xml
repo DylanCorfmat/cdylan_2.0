@@ -5,13 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/app/Http/Requests/Front/CommentRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/input-email.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/input-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/session-status.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/submit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/components/auth/validation-errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Front/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Front/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/front/comments-base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/components/front/comments-base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/confirm-password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/reset-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/auth/reset-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/auth/verify-email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/application-logo.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/auth-card.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/auth-session-status.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/danger-button.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/dropdown-link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/dropdown.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/input-error.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/input-label.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/modal.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/nav-link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/primary-button.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/responsive-nav-link.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/secondary-button.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/text-input.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/dashboard.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/layouts/app.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/layouts/guest.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/layouts/navigation.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/profile/edit.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/profile/partials/delete-user-form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/profile/partials/update-password-form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/profile/partials/update-profile-information-form.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
