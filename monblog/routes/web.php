@@ -15,6 +15,7 @@ use App\Http\Controllers\Back\{
     UserController as BackUserController,
     ResourceController as BackResourceController
 };
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +38,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'password.confirm')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::view('profile', 'auth.profile');
+    Route::name('profile')->put('profile', [RegisteredUserController::class, 'update']);
 });
 
 Route::prefix('posts')->group(function () {
@@ -81,5 +84,7 @@ Route::prefix('admin')->group(function () {
         Route::resource('pages', BackResourceController::class)->except(['show']);
     });
 });
+
+
 
 require __DIR__.'/auth.php';

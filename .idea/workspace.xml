@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7bb899f-f8c3-48e9-aad2-cd7b3cb6dfb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/monblog/lang/fr/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/lang/fr/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/lang/fr/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/lang/fr/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/comments/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/follows/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monblog/resources/views/back/pages/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/auth/confirm-password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monblog/resources/views/auth/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Back/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/config/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/config/titles.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/config/titles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/resources/views/back/shared/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/back/shared/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monblog/resources/views/components/back/box.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/components/back/box.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/app/Http/Controllers/Auth/RegisteredUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/app/Http/Controllers/Auth/RegisteredUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/resources/views/front/layout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/monblog/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/monblog/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
